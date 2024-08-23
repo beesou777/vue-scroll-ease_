@@ -1,7 +1,7 @@
 {
-  "name": "vue-scroll-ease",
-  "private": true,
-  "version": "0.0.0",
+  "name": "vue-scroll-effects",
+  "private": false,
+  "version": "0.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,11 +15,18 @@
     "@vitejs/plugin-vue": "^5.1.2",
     "vite": "^5.4.1"
   },
-  "main": "dist/vue-scroll-ease.umd.js",
+  "main": "dist/vue-scroll-effects.umd.js",
   "exports": {
-    ".": "./dist/vue-scroll-ease.umd.js"
+    ".": "./dist/vue-scroll-effects.umd.js"
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "vue",
+    "scroll",
+    "effects",
+    "animation",
+    "scroll-effects"
   ]
 }

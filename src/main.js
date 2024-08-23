@@ -1,6 +1,5 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-import reverse from "./lib/scroll-reveal"
+import { createApp } from 'vue';
+import App from './App.vue';
+import VueScrollEase  from './index';
 
-createApp(App).use(reverse).mount('#app')
+createApp(App).use(VueScrollEase).mount('#app');

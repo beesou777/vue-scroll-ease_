@@ -1,4 +1,10 @@
-// src/index.js
-import VueScrollEase from './lib/scroll-reveal'; // Adjust the import based on your actual plugin file
+import VueScrollEffect from './lib/scroll-reveal';
 
-export default VueScrollEase;
+const Plugin = {
+  install(app) {
+    app.directive('scroll-effect', VueScrollEffect);
+  }
+};
+
+export default Plugin;
+export { VueScrollEffect };

@@ -6,16 +6,18 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: 'src/main.js', // Ensure this path matches your entry file
-      name: 'VueScrollEase',
-      fileName: (format) => `vue-scroll-ease.${format}.js`
+      entry: 'src/index.js', // Entry file
+      name: 'VueScrollEffects',
+      fileName: (format) => `vue-scroll-effects.${format}.js`
     },
     rollupOptions: {
       external: ['vue'],
       output: {
         globals: {
           vue: 'Vue'
-        }
+        },
+        format: 'umd', // Ensure UMD format
+        exports: 'named',
       }
     }
   }
