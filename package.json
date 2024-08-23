@@ -1,0 +1,25 @@
+{
+  "name": "vue-scroll-ease",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "vite": "^5.4.1"
+  },
+  "main": "dist/vue-scroll-ease.umd.js",
+  "exports": {
+    ".": "./dist/vue-scroll-ease.umd.js"
+  },
+  "files": [
+    "dist"
+  ]
+}
