@@ -12,5 +12,8 @@
 - **Improved Documentation**: Updated the README to include detailed instructions on using the new features and options.
 - **Simplified Directive Usage**: Simplified the directive's API to make it more intuitive and easy to use.
 
+#### Fixed
+- **Element Rendering Issue**: Fixed an issue where elements were not rendering on the first screen due to an override property. This ensures that elements now correctly appear when they first enter the viewport.
+
 ### [0.1.0] - 2024-08-10
 - Initial release of `vue-scroll-ease` with basic scroll reveal functionality and customizable animation directions.
