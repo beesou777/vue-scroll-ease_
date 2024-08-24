@@ -1,45 +1,61 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
-  <h1 style="height: 100vh" >{{ msg }}</h1>
+  <div class="" style="overflow:hidden;">
+    <div class="" style="height:300px"></div>
+    <div class="" style="height:300px"></div>
 
-  <div class="card reveal-left" >
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+    <div class="flex-wrapper">
+        <div class="box-1" v-scroll-ease="{from:200,rotate:360}"></div>
+    </div>
+    <div class="" style="height:300px"></div>
+
+     <div class="flex-wrapper">
+        <div class="box-2" v-scroll-ease="{from:500,direction:'right'}"></div>
+    </div>
+    <div class="" style="height:300px"></div>
+     <div class="flex-wrapper" style="justify-content: flex-end;">
+        <div class="box-2" v-scroll-ease="{from:500,direction:'left'}"></div>
+    </div>
+    <div class="" style="height:300px"></div>
+     <div class="flex-wrapper">
+        <div class="box-3" v-scroll-ease="{from:500,direction:'right',rotate:30}"></div>
+    </div>
+
+     <div class="flex-wrapper" style="justify-content: flex-end;">
+        <div class="box-4" v-scroll-ease="{from:500,direction:'left',rotate:-180,delay:300}"></div>
+    </div>
+    <div class="" style="height:300px"></div>
   </div>
-
-  <p >
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p >
-     more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
-  <p class="height: 100vh">sde</p>
 </template>
 
+
 <style scoped>
-.read-the-docs {
-  color: #888;
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  margin: 20px;
+}
+
+.box-1{
+  width:300px;
+  height: 300px;
+  background: black;
+}
+
+.box-2{
+  width:300px;
+  height: 300px;
+  background: red;
+}
+
+.box-3{
+  width:300px;
+  height: 300px;
+  background: red;
+}
+.box-4{
+  width:300px;
+  height: 300px;
+  background: red;
 }
 </style>
