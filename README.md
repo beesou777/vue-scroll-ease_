@@ -64,9 +64,8 @@ Once registered, you can use the `v-scroll-ease` directive in your components to
 
 - **Easy Integration**: Quick to set up in any Vue 3 project, with flexible options for customization.
 
-### Known Limitations
+- **TypeScript Support**: The current version of `vue-scroll-ease` have TypeScript support.
 
-- **No TypeScript Support**: The current version of `vue-scroll-ease` does not have TypeScript support.
 
 
 ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
