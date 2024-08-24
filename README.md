@@ -18,7 +18,7 @@ First, register the `vue-scroll-ease` directive in your Vue app:
 ```javascript
 import { createApp } from 'vue';
 import App from './App.vue';
-import VueScrollEase from './index';
+import VueScrollEase from 'vue-scroll-ease';
 createApp(App).use(VueScrollEase).mount('#app');
 ```
 

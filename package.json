@@ -1,7 +1,7 @@
 {
   "name": "vue-scroll-ease",
   "private": false,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,9 +16,9 @@
     "typescript": "^5.5.4",
     "vite": "^5.4.1"
   },
-  "main": "dist/vue-scroll-ease.umd.js",
+  "main": "dist/vue-scroll-ease.umd.ts",
   "exports": {
-    ".": "./dist/vue-scroll-ease.umd.js"
+    ".": "./dist/vue-scroll-ease.umd.ts"
   },
   "files": [
     "dist"
