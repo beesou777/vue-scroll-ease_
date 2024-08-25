@@ -77,5 +77,10 @@ Once registered, you can use the `v-scroll-ease` directive in your components to
 
 ## Changelog
 
-For detailed changes and updates, please see the [CHANGELOG](https://github.com/beesou777/vue-scroll-ease/blob/main/CHANGELOG.md).
+For detailed changes and updates, please see the [CHANGELOG](https://github.com/bishwa-shah/vue-scroll-ease/blob/main/CHANGELOG.md).
+
+## Issue
+To Create Issue ,please see this [ISSUE](https://github.com/bishwa-shah/vue-scroll-ease/issues)
+
+
 ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
