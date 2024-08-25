@@ -1,40 +1,28 @@
-type TransformOptions = {
+type TransOpt = {
     from?: number; 
-    direction?: 'top' | 'bottom' | 'left' | 'right'; 
+    direction?: 'top' | 'bottom' | 'left' | 'right' | 'left-top' | 'right-top' | 'left-bottom' | 'right-bottom'; 
     rotate?: number; 
     delay?: number;
+    duration?: number;
 };
 
-export const getTransformValue = (options: TransformOptions): { transform: string, transitionDelay: string } => {
-    const { from = 20, direction = 'bottom', rotate, delay = 0 } = options;
+export const getTrans = (opt: TransOpt): { t: string, dly: string, dur: string } => {
+    const { from = 20, direction = 'bottom', rotate = 0, delay = 0, duration = 1 } = opt;
     
-    let transformValue = '';
-    switch (direction) {
-        case 'top':
-            transformValue = `translateY(-${from}px)`;
-            break;
-        case 'bottom':
-            transformValue = `translateY(${from}px)`;
-            break;
-        case 'left':
-            transformValue = `translateX(-${from}px)`;
-            break;
-        case 'right':
-            transformValue = `translateX(${from}px)`;
-            break;
-        default:
-            transformValue = `translateY(${from}px)`;
-            break;
+    const map: Record<string, string> = {
+        'top': `translateY(-${from}px)`,
+        'bottom': `translateY(${from}px)`,
+        'left': `translateX(-${from}px)`,
+        'right': `translateX(${from}px)`,
+        'left-top': `translate(-${from}px, -${from}px)`,
+        'right-top': `translate(${from}px, -${from}px)`,
+        'left-bottom': `translate(-${from}px, ${from}px)`,
+        'right-bottom': `translate(${from}px, ${from}px)`
     }
 
-    // Append rotation if provided
-    if (rotate !== undefined) {
-        transformValue += ` rotate(${rotate}deg)`;
-    }
-
-    // Return the transform and delay
     return {
-        transform: transformValue,
-        transitionDelay: `${delay}ms`
+        t: `${map[direction] || `translateY(${from}px)`} rotate(${rotate}deg)`,
+        dly: `${delay}ms`,
+        dur: `${duration}s`
     };
 };

@@ -3,6 +3,8 @@
   "private": false,
   "version": "0.1.2",
   "type": "module",
+  "description": "vue scroll effects",
+  "author": "bishwa jung shah",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -23,6 +25,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beesou777/vue-scroll-ease.git"
+  },
   "keywords": [
     "vue",
     "scroll",
@@ -30,5 +36,9 @@
     "animation",
     "scroll-effects"
   ],
+  "bugs": {
+    "url": "https://github.com/beesou777/vue-scroll-ease/issues"
+  },
+  "homepage": "https://github.com/beesou777/vue-scroll-ease#readme",
   "license": "MIT"
 }

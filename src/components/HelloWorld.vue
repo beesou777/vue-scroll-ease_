@@ -1,27 +1,27 @@
 <template>
   <div class="" style="overflow:hidden;">
-    <div class="" style="height:300px"></div>
-    <div class="" style="height:300px"></div>
+    <!-- <div class="" style="height:300px"></div> -->
+    <!-- <div class="" style="height:300px"></div> -->
 
     <div class="flex-wrapper">
-        <div class="box-1" v-scroll-ease="{from:200,rotate:360}"></div>
+        <div class="box-1" v-scroll-ease="{from:200,rotate:360,duration:4,delay:300}"></div>
     </div>
-    <div class="" style="height:300px"></div>
+    <div class="" style="height:200px"></div>
 
      <div class="flex-wrapper">
-        <div class="box-2" v-scroll-ease="{from:500,direction:'right'}"></div>
+        <div class="box-2" v-scroll-ease="{from:300,direction:'right-bottom',duration:2}"></div>
     </div>
-    <div class="" style="height:300px"></div>
+    <div class="" style="height:200px"></div>
      <div class="flex-wrapper" style="justify-content: flex-end;">
-        <div class="box-2" v-scroll-ease="{from:500,direction:'left'}"></div>
+        <div class="box-2" v-scroll-ease="{from:300,direction:'left-bottom',duration:1}"></div>
     </div>
-    <div class="" style="height:300px"></div>
+    <div class="" style="height:200px"></div>
      <div class="flex-wrapper">
-        <div class="box-3" v-scroll-ease="{from:500,direction:'right',rotate:30}"></div>
+        <div class="box-3" v-scroll-ease="{from:300,direction:'right-top',rotate:30}"></div>
     </div>
 
      <div class="flex-wrapper" style="justify-content: flex-end;">
-        <div class="box-4" v-scroll-ease="{from:500,direction:'left',rotate:-180,delay:300}"></div>
+        <div class="box-4" v-scroll-ease="{from:300,direction:'left-bottom',rotate:-180,delay:300}"></div>
     </div>
     <div class="" style="height:300px"></div>
   </div>

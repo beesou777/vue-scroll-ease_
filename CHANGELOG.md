@@ -1,5 +1,20 @@
 ## Changelog
 
+## [0.1.3] - 2024-08-26
+
+### Added
+- **TypeScript Support**: Full TypeScript support has been integrated, ensuring type safety and better development experience.
+
+### Changed
+- **Optimized Codebase**: Reduced the overall code size while improving performance, resulting in a more efficient directive with faster execution times.
+- **Extended Animation Directions**: Expanded the available animation directions to include more options like `left-top`, `right-top`, `left-bottom`, and `right-bottom` for enhanced customization.
+- **Custom Duration Option**: Added a customizable `duration` option, allowing for precise control over the length of animations.
+
+### Fixed
+- **Minor Bug Fixes**: Addressed minor bugs to enhance the stability and reliability of the scroll reveal functionality.
+
+### [0.1.2] - 2024-08-24
+
 ### [0.1.1] - 2024-08-24
 
 #### Added

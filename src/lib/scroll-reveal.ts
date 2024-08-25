@@ -1,54 +1,37 @@
 import { DirectiveBinding } from 'vue';
-import { getTransformValue } from '../utils/transformation';
+import { getTrans } from '../utils/transformation';
 import { debounce } from '../utils/debounce';
 
-type HTMLELEMETWithScrollReveal = HTMLElement & {
-    __scrollReveal__?: () => void;
+type ElemScroll = HTMLElement & {
+    __scrlRvl__?: () => void;
 };
 
 const VueScroll = {
-    mounted: (el: HTMLELEMETWithScrollReveal, binding: DirectiveBinding) => {
-        const options = binding.value || {};
-        const { transform, transitionDelay } = getTransformValue(options);
+    mounted: (el: ElemScroll, binding: DirectiveBinding) => {
+        const opt = binding.value || {};
+        const { t, dly,dur } = getTrans(opt);
         
-        // Apply the transformation and delay to the element
-        el.style.transform = transform;
-        el.style.transition = `opacity 0.6s ease-out, transform 0.6s ease-out`;
-        el.style.transitionDelay = transitionDelay || '0ms';
+        el.style.transform = t;
+        el.style.transition = `opacity ${dur}s ease-out, transform ${dur}s ease-in-out`;
+        el.style.transitionDelay = dly || '0ms';
+        el.style.transitionDuration = dur;
 
-        const scrollReveal = debounce(() => {
-            const elementIsScreen = el.getBoundingClientRect().top < window.innerHeight / 1;
-
-            if (elementIsScreen) {
-                el.classList.add("scroll-ease-revealed");
-            } else {
-                el.classList.remove("scroll-ease-revealed");
-            }
+        const scrRvl = debounce(() => {
+            const inSrc = el.getBoundingClientRect().top < window.innerHeight / 1;
+            el.style.opacity = inSrc ? '1' : '0';
+            el.style.transform = inSrc ? 'none' : t || 'translateY(20px)';
         }, 10);
 
-        window.addEventListener('scroll', scrollReveal);
-        scrollReveal();
-        el.__scrollReveal__ = scrollReveal;
+        window.addEventListener('scroll', scrRvl);
+        scrRvl();
+        el.__scrlRvl__ = scrRvl;
     },
-    unmounted: (el: HTMLELEMETWithScrollReveal) => {
-        if (typeof el.__scrollReveal__ === 'function') {
-            window.removeEventListener('scroll', el.__scrollReveal__);
+    unmounted: (el: ElemScroll) => {
+        if (typeof el.__scrlRvl__ === 'function') {
+            window.removeEventListener('scroll', el.__scrlRvl__);
         }
     }
 };
 
-// place it to original place
-const style = document.createElement('style');
-style.textContent = `
-  .scroll-reveal-starter {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  .scroll-ease-revealed {
-    opacity: 1 !important;
-    transform: translate(0, 0) !important;
-  }
-`;
-document.head.appendChild(style);
-
 export default VueScroll;
+
