@@ -17,9 +17,12 @@ const VueScroll = {
         el.style.transitionDuration = dur;
 
         const scrRvl = debounce(() => {
-            const inSrc = el.getBoundingClientRect().top < window.innerHeight / 1;
-            el.style.opacity = inSrc ? '1' : '0';
-            el.style.transform = inSrc ? 'none' : t || 'translateY(20px)';
+            const inView = el.getBoundingClientRect().top < window.innerHeight / 1;
+
+            el.style.opacity = inView ? '1' : '0';
+            el.style.transform = inView ? 'translate(0,0)' : t || 'translateY(20px)';
+            el.style.transition = inView ? `opacity ${dur} ease-out, transform ${dur} ease-in-out` : `opacity .5s ease-out, transform .5s ease-in-out`;
+
         }, 10);
 
         window.addEventListener('scroll', scrRvl);

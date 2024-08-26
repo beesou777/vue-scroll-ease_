@@ -12,6 +12,8 @@
 
 ### Fixed
 - **Minor Bug Fixes**: Addressed minor bugs to enhance the stability and reliability of the scroll reveal functionality.
+- **In View Animation**: When the content is not in view and after it is in view the same animation was applied now has been fixed 
+
 
 ### [0.1.2] - 2024-08-24
 
