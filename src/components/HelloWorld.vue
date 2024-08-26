@@ -1,9 +1,7 @@
 <template>
-  <div class="" style="overflow:hidden;">
-    <!-- <div class="" style="height:300px"></div> -->
-    <!-- <div class="" style="height:300px"></div> -->
+  <div class="" style="max-width:1450px;margin:0 auto">
 
-    <div class="flex-wrapper">
+    <div class="flex-wrapper" style="justify-content: flex-end;">
         <div class="box-1" v-scroll-ease="{from:200,rotate:360,duration:4,delay:300}"></div>
     </div>
     <div class="" style="height:200px"></div>
@@ -22,6 +20,18 @@
 
      <div class="flex-wrapper" style="justify-content: flex-end;">
         <div class="box-4" v-scroll-ease="{from:300,direction:'left-bottom',rotate:-180,delay:300}"></div>
+    </div>
+     <div class="flex-wrapper" >
+        <div class="box-4" v-scroll-ease="{from:300,direction:'left',rotate:-180,delay:300}"></div>
+    </div>
+     <div class="flex-wrapper" style="justify-content: flex-end;">
+        <div class="box-4" v-scroll-ease="{from:500,direction:'right',duration:3}"></div>
+    </div>
+     <div class="flex-wrapper">
+        <div class="box-4" v-scroll-ease="{from:300,direction:'top',delay:300,duration:4}"></div>
+    </div>
+     <div class="flex-wrapper" style="justify-content: flex-end;">
+        <div class="box-4" v-scroll-ease="{from:300,duration:2}"></div>
     </div>
     <div class="" style="height:300px"></div>
   </div>
