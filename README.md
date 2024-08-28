@@ -84,3 +84,8 @@ To Create Issue ,please see this [ISSUE](https://github.com/bishwa-shah/vue-scro
 
 
 ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
+
+
+## Acknowledgment
+
+Special thanks to [Pramod Laha](https://github.com/pramodlaha08) for contributing to the UI part. You can check out his work in the [vue-scroll-ease-ui2 repository](https://github.com/pramodlaha08/vue-scroll-ease-ui2).
