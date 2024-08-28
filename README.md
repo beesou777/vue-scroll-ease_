@@ -32,6 +32,19 @@ Once registered, you can use the `v-scroll-ease` directive in your components to
 </template>
 ```
 
+## TypeScript Integration
+
+To ensure TypeScript recognizes the `vue-scroll-ease` module, add the following declaration to your `shims-vue.d.ts` (or any `.d.ts` file in your project):
+
+```typescript
+declare module 'vue-scroll-ease' {
+    import { Plugin } from 'vue';
+    const VueScrollEase: Plugin;
+    export default VueScrollEase;
+}
+```
+
+
 ### Directive Options
 
 | **Option**    | **Description**                                                                                   | **Example Value**                | **Notes**                                                  |
