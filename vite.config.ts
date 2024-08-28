@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       name: 'VueScrollEase',
-      fileName: (format) => `vue-scroll-ease.${format}.ts` 
+      fileName: (format) => `vue-scroll-ease.${format}.js` 
     },
     rollupOptions: {
       external: ['vue'],

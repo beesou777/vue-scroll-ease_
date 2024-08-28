@@ -1,5 +1,14 @@
 ## Changelog
 
+## [0.1.4] - 2024-08-28
+
+### Fixed
+- Resolved build issues for `vue-scroll-ease` plugin related to TypeScript and Vite configuration.
+  - Updated `tsconfig.json` to align with Vite build settings.
+  - Adjusted `vite.config.ts` to correctly generate `.js` files for UMD format.
+  - Fixed type declaration issues in `src/index.ts` for better compatibility.
+  - Cleared `node_modules` and reinstalled dependencies to ensure a clean build environment.
+
 ## [0.1.3] - 2024-08-26
 
 ### Added

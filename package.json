@@ -1,7 +1,7 @@
 {
   "name": "vue-scroll-ease",
   "private": false,
-  "version": "0.1.3",
+  "version": "0.1.4",
   "type": "module",
   "description": "vue scroll effects",
   "author": "bishwa jung shah",
@@ -18,9 +18,9 @@
     "typescript": "^5.5.4",
     "vite": "^5.4.1"
   },
-  "main": "dist/vue-scroll-ease.umd.ts",
+  "main": "dist/vue-scroll-ease.umd.js",
   "exports": {
-    ".": "./dist/vue-scroll-ease.umd.ts"
+    ".": "./dist/vue-scroll-ease.umd.js"
   },
   "files": [
     "dist"
